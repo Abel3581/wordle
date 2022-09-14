@@ -9,9 +9,9 @@
   "status" de cada letra de la palabra:
 </p>
 
-• Si la letra no esta en la palabra secreta, se marca en gris.
+• Si la letra no esta en la palabra secreta, se marca en gris.<br>
 • Si la letra esta en la palabra secreta pero no esta en la misma posicion que en la palabra
-  que dio el usuario, se marca en amarillo.
+  que dio el usuario, se marca en amarillo.<br>
 • Si la letra est´a en la palabra secreta y en la posicion correcta, se marca en verde.
   El usuario tiene seis intentos para descubrir la palabra secreta. Si luego de los seis intentos
   no lo consigue, pierde el juego.
