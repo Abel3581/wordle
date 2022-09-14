@@ -1,4 +1,6 @@
-
+<h1>Programacion III - Universidad Nacional de General Sarmiento</h1>
+<h2>Trabajo Practico 1: W-UNGS-dle</h2>
+<br>
 <p>
   El objetivo del trabajo práctico es implementar una aplicación para jugar a Wordle. El juego
   consiste en adivinar una palabra secreta de cinco letras que propone la aplicacion. Al iniciar
