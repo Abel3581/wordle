@@ -17,3 +17,7 @@
 • Si la letra est´a en la palabra secreta y en la posicion correcta, se marca en verde.
   El usuario tiene seis intentos para descubrir la palabra secreta. Si luego de los seis intentos
   no lo consigue, pierde el juego.
+  <br>
+  <h3>UML</h3>
+  
+<img width="421" alt="uml_wordle" src="https://user-images.githubusercontent.com/59884602/190047919-db522ec9-e2f4-4e8b-8011-49be648afb20.png">
