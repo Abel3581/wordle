@@ -20,7 +20,7 @@
   <br>
   <h3>UML</h3>
   
-<img width="421" alt="uml_wordle" src="https://user-images.githubusercontent.com/59884602/190047919-db522ec9-e2f4-4e8b-8011-49be648afb20.png">
+<img width="421" alt="uml_wordle" style="text-align: center" src="https://user-images.githubusercontent.com/59884602/190047919-db522ec9-e2f4-4e8b-8011-49be648afb20.png">
 <br>
 <img width="158" alt="1m" src="https://user-images.githubusercontent.com/59884602/190048832-3ed526cb-81a6-49eb-a497-29a38b1e2f3c.png">
 
