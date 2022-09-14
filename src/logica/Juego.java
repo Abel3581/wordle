@@ -1,62 +1,58 @@
 package logica;
 
-import java.util.Scanner;
 
 public class Juego {
 
-	public static Scanner s = new Scanner(System.in);
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-	
+	private static final String ANSI_RESET = "\u001B[0m";
+	private static final String ANSI_YELLOW = "\u001B[33m";
+	private static final String ANSI_GREEN = "\u001B[32m";
+
 	private Palabra palabra;
-	private int tries;
+	private int intentos;
 	private long startTime;
 	private boolean terminado;
 
 	public Juego() {
 		this.palabra = new Palabra();
-		this.tries = 0;
+		this.intentos = 0;
 		this.terminado = false;
 		this.startTime = System.currentTimeMillis();
 		System.out.println("Wordle: Escriba una palabra de 5 letras");
-		
 	}
 
 	public long tiempoDeJuego() {
-		
 		return ((System.currentTimeMillis() - startTime) / 1000);
 	}
-	
-	public int[] PlayWordle(String InputWordleWord) {
+
+	public int[] validarCaracter(String palabraIngresada) {
 		terminado = false;
-		tries++;
+		intentos++;
 		char[] input = palabra.getInput();
 		char[] caracterSecretos = palabra.getCaracterSecretos();
 
-		String R1 = InputWordleWord.toLowerCase();// String R1 = s.nextLine().toLowerCase();
+		String p = palabraIngresada.toLowerCase();// pone los caracteres sin mayusculas
 
 		// comprueba si son 5 letras y si es una palabra posible
-		if (!palabra.esValidaPalabra(R1)) {
+		if (!palabra.esValidaPalabra(p)) {
 			System.out.println("no fue una buena palabra");
 		} else {
 			for (int i = 0; i < 5; i++) { // pone el inputWord en un char[]
-				input[i] = R1.charAt(i);
+				input[i] = p.charAt(i);
 			}
 		}
+
 		// solo reinicia la respuesta cada vez palabraSecreta
 		for (int i = 0; i < 5; i++) {
 			caracterSecretos[i] = palabra.getPalabraSecreta().charAt(i);
 		}
-		return returnColorOfLeters(input, caracterSecretos);
+		return devolverColorDeLetras(input, caracterSecretos);
 	}
 
-	private int[] returnColorOfLeters(char[] inputWord, char[] correctWord) {
+	private int[] devolverColorDeLetras(char[] inputWord, char[] correctWord) {
 		char[] answerTemp = correctWord;
-		
-		int[] colorForLetter = new int[5]; 	// 0 is grey, yellow is 1, green is 2
+		int[] colorForLetter = new int[5]; // 0 is grey, yellow is 1, green is 2
 
-		for (int i = 0; i < 5; i++) { 		// comprueba si hay alguna posición correcta + letra (verde)
+		for (int i = 0; i < 5; i++) { // comprueba si hay alguna posición correcta + letra (verde)
 			if (inputWord[i] == answerTemp[i]) {
 				answerTemp[i] = '-';
 				colorForLetter[i] = 2;
@@ -102,12 +98,12 @@ public class Juego {
 		this.palabra = palabra;
 	}
 
-	public int getTries() {
-		return tries;
+	public int getIntentos() {
+		return intentos;
 	}
 
-	public void setTries(int tries) {
-		this.tries = tries;
+	public void setIntentos(int intentos) {
+		this.intentos = intentos;
 	}
 
 	public long getStartTime() {
@@ -118,9 +114,14 @@ public class Juego {
 		this.startTime = startTime;
 	}
 
-//	public static void main(String[] args) {
-//	Juego juego = new Juego();
-//	System.out.println(juego.toString());
-//}
+	@Override
+	public String toString() {
+		return "Juego [palabra=" + palabra + "]";
+	}
+
+	public static void main(String[] args) {
+	Juego juego = new Juego();
+	System.out.println(juego.toString());
+}
 
 }
