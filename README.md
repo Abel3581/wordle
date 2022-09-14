@@ -10,7 +10,9 @@
   con la palabra secreta, el usuario gana el juego. Si no, la aplicacion le informa al usuario el
   "status" de cada letra de la palabra:
 </p>
-
+<ul>
+  <li>Si la letra no esta en la palabra secreta, se marca en gris.</li>
+</ul>
 • Si la letra no esta en la palabra secreta, se marca en gris.<br>
 • Si la letra esta en la palabra secreta pero no esta en la misma posicion que en la palabra
   que dio el usuario, se marca en amarillo.<br>
@@ -27,3 +29,4 @@
 <img width="156" alt="2m" src="https://user-images.githubusercontent.com/59884602/190048842-faa10c3d-df2e-42c7-9184-bdd42b864560.png">
 
 <img width="154" alt="3m" src="https://user-images.githubusercontent.com/59884602/190048851-f9b77575-886d-4192-ba2b-1826f22bcaf2.png">
+<br>
