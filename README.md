@@ -19,7 +19,7 @@
      no lo consigue, pierde el juego.</li>
 </ul>
   <br>
-  <h3 style="text-align: center>UML</h3>
+  <h3 style="text-align: center">UML</h3>
   
 <img width="421" alt="uml_wordle" src="https://user-images.githubusercontent.com/59884602/190047919-db522ec9-e2f4-4e8b-8011-49be648afb20.png">
 <br>
