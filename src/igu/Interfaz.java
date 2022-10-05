@@ -113,9 +113,9 @@ public class Interfaz implements ActionListener {
 		String userInput = textoIngresado.getText(); // Obtengo lo tecleado por el user
 		int[] colorOfLetters = juego.validarCaracter(userInput);
 
-//Mueve y cambia el tamaño de este componente. La nueva ubicación de la parte superior
-//izquierda la esquina está especificada por {@code x} y {@code y}, y el nuevo tamaño se 
-//especifica mediante {@code width} y {@code height}.
+		//Mueve y cambia el tamaño de este componente. La nueva ubicación de la parte superior
+		//izquierda la esquina está especificada por {@code x} y {@code y}, y el nuevo tamaño se 
+		//especifica mediante {@code width} y {@code height}.
 		textoIngresado.setBounds(40, 80 + ((intentos + 1) * 25), 80, 25);
 		terminado = true;
 		for (int i : colorOfLetters) {
@@ -127,11 +127,14 @@ public class Interfaz implements ActionListener {
 			}
 		}
 			// Selecciona el color del caracter
-			String[] numsToColors = new String[5];
-			for (int i = 0; i < 5; i++) {
-	            if (colorOfLetters[i] == 0) numsToColors[i] = "black";
-	            else if (colorOfLetters[i] == 1) numsToColors[i] = "orange";
-	            else if (colorOfLetters[i] == 2) numsToColors[i] = "green";
+		String[] numsToColors = new String[5];
+		for (int i = 0; i < 5; i++) {
+	            if (colorOfLetters[i] == 0) 
+			    numsToColors[i] = "black";
+	            else if (colorOfLetters[i] == 1) 
+			    numsToColors[i] = "orange";
+	            else if (colorOfLetters[i] == 2) 
+			    numsToColors[i] = "green";
 	        }
 
 			System.out.println("Establecer colores para " + numsToColors[0] + " " + numsToColors[1] + " "
@@ -147,12 +150,11 @@ public class Interfaz implements ActionListener {
 			                "<html><font size='5' color=" + numsToColors[4] + "> " + userInput.charAt(4) + "</font> <font            ");
 
 			siguienteLabel(finalString);
-			textoIngresado.setText(""); // establece el cuadro de texto en "" después de que se haya //realizado toda la
-										// lógica
+			textoIngresado.setText(""); // establece el cuadro de texto en "" después de que se haya //realizado toda la lógica
 		
 	}
 
-//Escribe la palabra en el siguiente intento
+	//Escribe la palabra en el siguiente intento
 	public static void siguienteLabel(String palabraConColor) {
 		int intentos = juego.getIntentos();
 		labels[intentos - 1].setText(palabraConColor);
